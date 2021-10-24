@@ -7,10 +7,8 @@ const library = [
     { Name: "Cgreen", Autor: "cordero", Pages: 300 },
     { Name: "Dlong", Autor: "diego", Pages: 400 },
 ];
-const fileName = './booksLibrary.txt';
-const libraryJson = JSON.stringify(library);
+const fileName = 'booksLibrary.txt';
 const libraryObj = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-fs.writeFileSync(fileName, libraryJson);
 const enterAction = process.argv[2];
 const enterName = process.argv[3];
 const enterAutor = process.argv[4];
@@ -82,3 +80,5 @@ function showAllBooks() {
     console.log(libraryObj);
 }
 // if (enterAction == 'getAll') {showAllBooks();}
+const libraryJson = JSON.stringify(library);
+fs.writeFileSync(fileName, libraryJson);
