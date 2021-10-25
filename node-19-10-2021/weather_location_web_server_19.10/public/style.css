@@ -1,0 +1,35 @@
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+input {
+    font-size: 20px;
+    margin-top: 30px;
+    height: 40px;
+    width: 260px;
+}
+
+button {
+    height: 45px;
+    width: 75px;
+    font-size: 24px;
+}
+
+img {
+    display: block;
+}
