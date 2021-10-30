@@ -1,0 +1,24 @@
+GET https://jsonplaceholder.typicode.com/comments
+###
+GET https://jsonplaceholder.typicode.com/comments/501
+###
+POST https://jsonplaceholder.typicode.com/comments
+
+Content-Type: application/json
+
+{
+    "name":"comment1",
+    "email":"comment1@gmai.com",
+    "body":"body of post1"
+}
+
+###
+DELETE https://jsonplaceholder.typicode.com/comments/1
+###
+PATCH https://jsonplaceholder.typicode.com/comments/1 
+
+Content-Type: application/json
+
+{
+    "email":"anat@gmail.com"
+}

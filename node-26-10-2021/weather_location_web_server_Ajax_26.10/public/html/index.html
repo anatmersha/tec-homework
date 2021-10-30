@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Location</h1>
+    <h3>Use this site to get your city location</h3>
+    <a href="../html/index.html">Home</a>
+    <a href="../html/about.html">About</a>
+    <a href="../html/help.html">Help</a>
+
+
+    <form id="coordsSearch">
+        <input id="cityNameInput" type="text" name="city" placeholder="Insert city name">
+        <button type="submit">Send</button>
+    </form>
+    <p id="para"></p>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js">
+    </script>
+    <script>
+        document.getElementById('coordsSearch').addEventListener("submit", getCoordsByCity);
+        const para = document.getElementById('para');
+
+        function getCoordsByCity(event) {
+            event.preventDefault();
+            const name = document.getElementById('cityNameInput').value;
+            axios.get('/city')
+                .then(function(response) {
+                    console.log("response.data");
+                    // console.log(response.data);
+                    para.innerHTML += "response.data";
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+    </script>
+</body>
+
+</html>

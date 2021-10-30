@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>index</h1>
+
+    <form id="idAddTask">
+        <input id="idTaskName" type="text" name="name" placeholder="Insert task name">
+        <button type="submit">Send</button>
+    </form>
+
+    <form id="idSearchTask">
+        <input id="taskId" type="text" name="id" placeholder="Insert task id">
+        <button type="submit">Search</button>
+    </form>
+
+
+    <form id="idDeleteTask">
+        <input id="taskIdDelete" type="text" name="id" placeholder="Insert task id">
+        <button type="submit">Search</button>
+    </form>
+
+    <button onclick="showData()">ClickMe</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('idAddTask').addEventListener("submit", addTask);
+        document.getElementById('idSearchTask').addEventListener("submit", searchTask);
+        document.getElementById('idDeleteTask').addEventListener("submit", deleteTask);
+
+
+        function addTask(event) {
+            event.preventDefault();
+            //  1. take name from -form 
+            const name = document.getElementById('idTaskName').value;
+            //  2. use axios to perform ajax post request to server with name
+            axios.post("/tasks", {
+                    name: name,
+                })
+                .then(function(response) {
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+
+        function showData() {
+            axios.get(`/tasks`)
+                .then(function(response) {
+                    console.log(response.data);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+
+        function searchTask(event) {
+            event.preventDefault();
+            //  1. take name from -form 
+            const id = document.getElementById('taskId').value;
+            //  2. use axios to perform ajax post request to server with name
+            const url = `/tasks/${id}`;
+            axios.get(url)
+                .then(function(response) {
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+
+        function deleteTask(event) {
+            event.preventDefault();
+            //  1. take name from -form 
+            const id = document.getElementById('taskIdDelete').value;
+            //  2. use axios to perform ajax post request to server with name
+            const url = `/tasks/${id}`;
+            axios.get(url)
+                .then(function(response) {
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+    </script>
+</body>
+
+</html>
