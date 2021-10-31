@@ -1,6 +1,8 @@
 GET https://jsonplaceholder.typicode.com/comments
+
 ###
 GET https://jsonplaceholder.typicode.com/comments/501
+
 ###
 POST https://jsonplaceholder.typicode.com/comments
 
@@ -14,6 +16,7 @@ Content-Type: application/json
 
 ###
 DELETE https://jsonplaceholder.typicode.com/comments/1
+
 ###
 PATCH https://jsonplaceholder.typicode.com/comments/1 
 
