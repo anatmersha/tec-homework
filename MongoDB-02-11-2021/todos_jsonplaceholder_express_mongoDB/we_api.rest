@@ -1,0 +1,21 @@
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+    "title":"laundry",
+    "completed":true
+}
+###
+GET  http://localhost:8080/todos
+
+###
+PATCH  http://localhost:8080/todos/617fe0bf981c437a1027eac8
+Content-Type: application/json
+
+{
+    "title":"dishes",
+    "completed":false
+}
+###
+DELETE http://localhost:8080/todos/617fe0c0981c437a1027eac9
+###

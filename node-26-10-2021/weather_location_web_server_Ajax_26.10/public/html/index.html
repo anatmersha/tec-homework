@@ -30,11 +30,15 @@
         function getCoordsByCity(event) {
             event.preventDefault();
             const name = document.getElementById('cityNameInput').value;
-            axios.get('/city')
+            axios.get('/city', {
+                    params: {
+                        city: name
+                    }
+                })
                 .then(function(response) {
                     console.log("response.data");
                     // console.log(response.data);
-                    para.innerHTML += "response.data";
+                    para.innerHTML += response.data;
                 })
                 .catch(function(error) {
                     console.log(error);
