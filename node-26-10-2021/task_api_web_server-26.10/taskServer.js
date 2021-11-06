@@ -2,7 +2,7 @@ const axios = require("axios");
 const express = require("express");
 const path = require("path");
 const app = express();
-// const port = 8080;
+const port = 2020;
 let freeId = 0;
 const publicPath = path.join(__dirname, 'public');
 const tasks = [
@@ -17,9 +17,11 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send("index");
 })
+
 app.get('/tasks', (req, res) => {
     res.send(tasks);
 })
+
 app.post('/tasks', (req, res) => {
     // todo: add task object to array-take task name from request, add date, id, completed.
     const name = req.body.name;
@@ -32,8 +34,9 @@ app.post('/tasks', (req, res) => {
         console.log(newTask);
         res.sendStatus(201);
     }
-
 })
+
+
 app.get('/tasks/:id', (req, res) => {
     const params = req.params;
     task = tasks.find(it => it.id == params.id);

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+// const port = 8080;
 app.use(express.json());
 let mongo = require('mongodb');
 let MongoClient = require('mongodb').MongoClient;
@@ -38,6 +38,10 @@ app.post("/todos", (req, res) => {
 
 app.get("/todos", (req, res) => {
     utiles.getTodos(req, res);
+})
+
+app.get("/todos/:id", (req, res) => {
+    utiles.getTodo(req, res);
 })
 
 app.patch("/todos/:id", (req, res) => {

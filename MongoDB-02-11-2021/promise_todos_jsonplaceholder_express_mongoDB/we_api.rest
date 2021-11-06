@@ -9,6 +9,9 @@ Content-Type: application/json
 GET http://localhost:8080/todos
 
 ###
+GET http://localhost:8080/todos/0
+
+###
 PATCH  http://localhost:8080/todos/617fe0bf981c437a1027eac8
 Content-Type: application/json
 
