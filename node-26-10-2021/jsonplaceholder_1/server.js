@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-// const port = 8080;
+const port = 8080;
 let commentId = 0;
 app.use(express.json())
 app.get('/', (req, res) => {

@@ -47,11 +47,15 @@ function updateTodo(req, res) {
     client
         .then((db) => {
             let dbo = db.db(dbName);
+
             const newTodo = req.body;
+
             if (newTodo.title == "" || newTodo.title == undefined) {
                 res.sendStatus(400)
             } else {
+
                 const params = { _id: ObjectId(req.params.id) };
+
                 console.log(params);
                 dbo.collection("todos").updateOne(params, { $set: newTodo }).then((result) => {
                     console.log(result);

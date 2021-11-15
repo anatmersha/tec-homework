@@ -48,8 +48,10 @@ function findAndUpdateTodo(req, res) {
         if (err) { console.log(err); }
         const newTodo = req.body
         let dbo = db.db(dbName);
+
         const params = { _id: ObjectId(req.params.id) };
         console.log(params);
+
         dbo.collection("todos").findOneAndUpdate(params, { $set: newTodo }, (err, todo) => {
             if (err) { console.log(err); }
             if (!Number(newTodo.userId) || !Number(newTodo.id)) {
