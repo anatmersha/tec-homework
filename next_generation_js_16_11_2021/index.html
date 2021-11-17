@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Class_1-3
+        class Student {
+            constructor(name, age, gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+            write() {
+                console.log(this.name, this.age, this.gender);
+            }
+            isYoung() {
+                if (this.age < 18) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
+        const student1 = new Student("Segedu", 16, "other");
+        const student2 = new Student("Anat", 27, "female");
+        const student3 = new Student("Maayan", 13, "female");
+        // console.log(student1.isYoung());
+        // console.log(student2.isYoung());
+        const students = [student1, student2, student3];
+        students.forEach(student => {
+                console.log(student.isYoung());
+            })
+            //Module_1
+            // מודולים מאפשרים לנו כתיבת קוד יעילהוקצרה יותר. מאפשרת לנו כתיבת פונק' וכד'פעם אחת ולייבא אותה בכל דף אחר.
+    </script>
+</body>
+
+</html>
