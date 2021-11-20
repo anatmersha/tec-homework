@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+    const domElement=document.getElementById('body');
+    
+    // 5
+    function Header(){
+        return <header><h1>Im a header</h1></header>
+    }
+    function Main(){
+        return <main><h1>Im a main</h1></main>
+    }
+    function Footer(){
+        return <footer><h1>Im a footer</h1></footer>
+    }
+    // 6
+    function HelloUser(props){
+        return <h1>Hello {props.name}</h1>
+    }
+    // 7
+    function Person(props){
+        return <h1>Name: {props.name}, Age: {props.age}</h1>
+    }
+    // 8
+    function LinkToImage(props){
+        return <img src={props.link}></img>
+    }
+    // 9
+    function LinkToVideo(props){
+        return <video controls><source src={props.link}></source></video>
+    }
+    // 10 
+    // props: זהו ארגומנט שעובר בפונקציית קומפוננט, המעביר מידע מקומפוננט אב לקומפוננט בן
+        
+    
+    ReactDOM.render(
+        <div>
+            <Header/>
+            <Main/>
+            <Footer/>
+
+            <HelloUser name="Anat"/>
+            <HelloUser name="Avihu"/>
+            <HelloUser name="Mahlia"/>
+            <HelloUser name="Ruty"/>
+            <HelloUser name="Maayan"/>
+            <HelloUser name="Shmuel"/>
+            <HelloUser name="Segedu"/>
+            <HelloUser name="Uri"/>
+            <HelloUser name="Brahano"/>
+            <HelloUser name="Yakov"/>
+
+            <Person name="Anat" age="15"/>
+            <Person name="Avihu" age="16"/>
+            <Person name="Mahlia" age="17"/>
+            <Person name="Ruty" age="18"/>
+            <Person name="Maayan" age="19"/>
+            <Person name="Shmuel" age="20"/>
+            <Person name="Segedu" age="21"/>
+            <Person name="Uri" age="22"/>
+            <Person name="Brahano" age="23"/>
+            <Person name="Yakov" age="24"/>
+
+            <LinkToImage link="https://cdn.pixabay.com/photo/2020/11/04/13/29/cereal-5712343__340.jpg"/>
+            <LinkToImage link="https://cdn.pixabay.com/photo/2016/11/22/23/13/black-dog-1851106__340.jpg"/>
+            <LinkToImage link="https://cdn.pixabay.com/photo/2015/03/07/23/54/hand-663726__340.jpg"/>
+
+            <LinkToVideo link="https://player.vimeo.com/external/591865490.sd.mp4?s=914573a4e455eb41b1d52df49bf69bf253db59ca&profile_id=164"/>
+            <LinkToVideo link="https://player.vimeo.com/external/589164621.sd.mp4?s=8955bbd412bf9b74bd2f108303e4271a63b2d8a5&profile_id=164"/>
+            <LinkToVideo link="https://player.vimeo.com/external/646668826.sd.mp4?s=45e3639e353ada3a96251076fde186cf7b64056c&profile_id=164&oauth_token_id=1027659655"/>
+        </div>
+    ,domElement)
+
+
+    </script>
+</body>
+</html>

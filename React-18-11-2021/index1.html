@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<main id="app"></main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        const domElement=document.getElementById('app');
+        // 1
+        function Hello(){
+            return <article>
+                        <p>"hello"</p>
+                    </article>;
+        }
+        // 2
+        function CarObj(){
+            const Car={Brand:"mazda", year:2009, price:20000, img: "https://cdn.pixabay.com/photo/2016/11/19/17/14/automobile-1840414__340.jpg"};
+            return <article>
+                        <h1>Car:</h1>
+                        <p>Brand: {Car.Brand} Year: {Car.year} Price: {Car.price}</p>
+                        <img src={Car.img}></img>
+                    </article>
+        }
+        // 3
+        const name="Anat";
+        function MyName(){
+            return <h1>My name is: {name}</h1>
+        }
+        // 4
+        function Hello(){
+            return <article>
+                        <h1>Hello {name}</h1>
+                    </article>;
+        }
+ReactDOM.render(
+    <section>
+        <Hello/>
+        <CarObj/><CarObj/><CarObj/><CarObj/><CarObj/><CarObj/><CarObj/><CarObj/><CarObj/><CarObj/>
+        <MyName/>
+    </section>
+,domElement)
+    </script>
+</body>
+</html>
