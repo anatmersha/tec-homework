@@ -1,0 +1,11 @@
+.weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 22px;
+    width: 70%;
+    height: 340px;    
+    margin: auto;
+}
