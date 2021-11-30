@@ -1,0 +1,10 @@
+.EmployeeCard{
+    width: 33%;
+    text-align: center;
+}
+.EmployeeImg {
+    width: 200px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
