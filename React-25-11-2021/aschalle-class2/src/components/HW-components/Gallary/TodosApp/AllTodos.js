@@ -5,12 +5,6 @@ class AllTodos extends React.Component{
 
     newTodo = (e) => {this.setState({todoInput: e.target.value})}
 
-    deleteTodo = (i) => {
-        const todosList = this.state.todos;
-        todosList.splice(i, 1);
-        this.setState({todos: [todosList]})
-    }
-
     addNewTodo = (e) => {
         e.preventDefault();
 
@@ -25,10 +19,11 @@ render(){
         return(
             <div>
                 <h1>Todo-List</h1>                
-            {this.state.todos.map((todo, i) => {
+            {this.state.todos.map((todo) => {
                 return(
-                <div style={{display:"flex", justifyContent:"center", alignItems:"center"}} key={i} onClick={this.deleteTodo(i)}>
+                <div style={{display:"flex", justifyContent:"center", alignItems:"center"}} key={todo}>
                     {todo.title}
+                    <button><i className="fa fa-trash"></i></button>
                 </div>
                 );
             })}

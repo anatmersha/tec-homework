@@ -7,9 +7,8 @@ import GetWeatherApi from "./components/HW-components/GetWeatherApi";
 function App() {
   return (
     <div className="App">
-     {/* <GetFromJsonPlaceholder/> */}
       <GetWeatherApi/>
-      {/* <Register/> */}
+      <Register/>
     </div>
   );
 }
