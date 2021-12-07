@@ -21,7 +21,7 @@ class Person2 extends React.Component{
                 person.firstName = this.state.inputFirst;
                 person.lastName = this.state.inputLast;       
             
-                this.setState({person})         
+                this.setState({person, inputFirst: "", inputLast: ""})         
                 }}>UPDATE</button>
 
                 {this.state.persons.map((person, i) => {

@@ -1,28 +1,28 @@
-// import React from "react";
+import React from "react";
 
-// class LogInWithValidation extends React.Component{
-// state = {name: "", password: ""};
+class LogInWithValidation extends React.Component{
+state = {name: "", password: ""};
 
-// changeHandlerName = (e) => this.setState({name: e.target.value});
-// changeHandlerPassword = (e) => this.setState({password: e.target.value});
-// login = () => console.log(this.state);
+changeHandlerName = (e) => this.setState({name: e.target.value});
+changeHandlerPassword = (e) => this.setState({password: e.target.value});
+login = () => console.log(this.state);
 
 
-// isValidationOk = () => this.state.password.length > 5;
+isValidationOk = () => this.state.password.length > 5;
 
-// render() {
-//         const passwordColor= {color: this.state.password.length <= 5 ? "red" : "black"}
-//         const nameStyle = {color: this.state.name.length <= 3 ? "red" : "black"}
-//         const isBtnDisabled = !this.isValidationOk();
-//         return (
-//             <div>
-//                 <input style={nameStyle} onChange={this.changeHandlerName} type="text" placeholder="insert user name"/>
-//                 <input style={passwordColor} onChange={this.changeHandlerPassword} type="text" placeholder="insert password"/>
-//                 <button disabled={isBtnDisabled} onClick={this.login}>Login</button>
-//             </div>
-//         );
-//     }
-// }
+render() {
+        const passwordColor= {color: this.state.password.length <= 5 ? "red" : "black"}
+        const nameStyle = {color: this.state.name.length <= 3 ? "red" : "black"}
+        const isBtnDisabled = !this.isValidationOk();
+        return (
+            <div>
+                <input style={nameStyle} onChange={this.changeHandlerName} type="text" placeholder="insert user name"/>
+                <input style={passwordColor} onChange={this.changeHandlerPassword} type="text" placeholder="insert password"/>
+                <button disabled={isBtnDisabled} onClick={this.login}>Login</button>
+            </div>
+        );
+    }
+}
 
 
 // const LogIn = () => {

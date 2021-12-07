@@ -7,13 +7,6 @@ class Posts extends React.Component{
         this.getTodos()
     }
 
-    // componentDidUpdate(prev){
-    //     if(prev.posts !== this.state.posts){
-    //         this.getTodos()
-    //         console.log("hiiiiii");
-    //     }
-    // }
-
     getTodos = () =>{
         const url = "https://jsonplaceholder.typicode.com/posts";
         fetch(url)
