@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("lastname", "marsha");
+        let i= localStorage.getItem("lastname")
+        console.log(i);
+        person = {name: "avi", age: 33}
+        let myObj = localStorage.setItem("person", JSON.stringify(person))
+
+
+
+        localStorage.setItem("countKey", JSON.stringify([]))
+        let countJson = localStorage.getItem("countKey")
+        let counts = JSON.parse(countJson);
+        counts.push(4)
+        localStorage.setItem("countKey", JSON.stringify(counts));
+
+        let c = JSON.parse(localStorage.getItem("person"))
+        console.log(c.name);
+        
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+    </script>
+</body>
+</html>
