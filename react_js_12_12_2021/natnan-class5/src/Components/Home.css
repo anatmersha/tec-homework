@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+.hero-img{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    height: 75vh;
+}
+
+.row{
+    display: flex;
+    overflow: hidden;
+}

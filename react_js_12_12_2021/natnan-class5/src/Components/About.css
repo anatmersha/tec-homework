@@ -1,0 +1,29 @@
+.card{
+    display: inline-flex;
+    margin-top: 70px;
+    width: 80vw;
+    margin-left: 190px;
+    height: 500px;
+    background-color: darkorange;
+}
+.card-description{
+    margin-top: -20px;
+    margin-left: 73px;
+    opacity: 0.9;
+}
+.card-description p{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+.card-description h1{
+    font-size: 50px;
+    letter-spacing: 8px;
+    color: white;
+}
+.card img{
+    height: 560px;
+    margin-left: 170px;
+    margin-top: 10px;
+}

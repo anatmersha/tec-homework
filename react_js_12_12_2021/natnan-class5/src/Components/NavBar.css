@@ -1,0 +1,11 @@
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.nav-link{
+    margin-left: 28px;
+    font-size: 20px;
+    color: tan;
+    letter-spacing: 4px;
+}
