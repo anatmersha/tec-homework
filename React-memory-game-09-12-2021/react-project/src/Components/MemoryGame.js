@@ -45,7 +45,7 @@ class MemoryGame extends React.Component{
     
     startNewGame = () => {
         this.state.cards.forEach(card => card.clicked = false)
-        this.setState({clockCount: 0, movesCount: 0})
+        this.setState({clockCount: 0, movesCount: 0, history: []})
         this.shuffleCards();
         this.startGame();
     }
@@ -167,7 +167,6 @@ class MemoryGame extends React.Component{
                 onClick={this.startNewGame}>Restart Game</button>
 
 
-                {/* // localStorage.clear(); */}
                 <button className="historyBtn" onClick={()=>{
                     this.setState({history: this.getWinHistory()})
                     console.log(this.state.history);
